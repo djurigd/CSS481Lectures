@@ -1,0 +1,13 @@
+p,
+h1 {
+    background-color: #716b56;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 20px;
+    margin: 30px;
+}
+div p {
+    background: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+}

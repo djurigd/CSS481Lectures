@@ -1,0 +1,36 @@
+div.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: aqua;
+    position: relative;
+    animation: whatever 5s infinite;
+}
+
+@keyframes whatever {
+    0% {
+        background-color: lightblue;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: lightgreen;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: lightcoral;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: lightgoldenrodyellow;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: lightblue;
+        left: 0px;
+        top: 0px;
+    }
+}
