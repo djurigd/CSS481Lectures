@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function createChessBoard() {
+                let chess_board = document.createElement("table");
+                const n = prompt("Size: ");
+                for (let i = 1; i <= n; i++) {
+                    let chess_row = document.createElement("tr");
+                    for (let j = 1; j <= n; j++) {
+                        let cell = document.createElement("td");
+                        td.textContent = " "
+                        if ((i + j) % 2 === 1) {
+                            cell.style.backgroundColor = "black";
+                        } else {
+                            cell.style.backgroundColor = "white";
+                        }
+                        chess_row.append(cell);
+                    }
+                    chess_board.append(chess_row);
+                }
+                document.body.append(chess_board);
+            }
+        </script>
+    </head>
+    <body onload="createChessBoard()"></body>
+</html>

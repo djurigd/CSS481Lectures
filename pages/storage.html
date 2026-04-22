@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                const colorPicker = document.getElementById("colorPicker");
+                const colorValue = document.getElementById("colorValue");
+                colorPicker.addEventListener("input", () => {
+                    const color = colorPicker.value;
+                    colorValue.textContent = color;
+                    document.body.style.backgroundColor = color;
+                    sessionStorage.setItem("whatever", color);
+                });
+
+                const savedColor = sessionStorage.getItem("whatever");
+                if (savedColor) {
+                    colorPicker.value = savedColor;
+                    colorValue.textContent = savedColor;
+                    document.body.style.backgroundColor = savedColor;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <input type="color" id="colorPicker"/>
+        <p id="colorValue"></p>
+    </body>
+</html>

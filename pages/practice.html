@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            const fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+            let list = document.createElement("ul");
+            for (let fruit of fruits){
+                let li = document.createElement("li");
+                li.textContent = fruit;
+                li.style.color = "red";
+                list.appendChild(li);
+            }
+            document.body.appendChild(list);
+        </script>
+    </body>
+</html>

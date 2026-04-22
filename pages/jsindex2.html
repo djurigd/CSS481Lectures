@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function changeHeaderColor(event){
+                const color = event.target.textContent;
+                document.querySelector("h1").style.color = color;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="header">Hi</h1>
+        <button style="background-color:red" onclick="changeHeaderColor(event)">red</button>
+        <button style="background-color:green" onclick="changeHeaderColor(event)">green</button>
+        <button style="background-color:blue" onclick="changeHeaderColor(event)">blue</button>
+        <button style="background-color:pink" onclick="changeHeaderColor(event)">pink</button>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+div.app {
+    background-color: lightgrey;
+    padding: 20px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 5px;
+            &.special{
+                background-color: lightblue;
+                font-weight: bold;
+                color: white;
+            }
+        }
+    }
+}
+
+@mixin box($color, $size: 200px){
+    background-color: $color;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: $size;
+    height: $size;
+}
+
+div.a {
+    @include box(blue, 500);
+}
+
+div.b {
+    @include box(red, 100);
+}
+
+div.c {
+    @include box(green, 400);
+}
+
+div.d {
+    @include box(yellow, 80);
+}

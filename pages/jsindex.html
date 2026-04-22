@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const fruit = ['apple', 'orange', 'pineapple', 'mangosteen', 'grapes'];
+
+            function whatever() {
+                const div = document.querySelector("#myDiv");
+                div.innerHTML += "<h1>Whatever</h1>";
+            }
+
+            function generateList(){
+                const div = document.querySelector("#myDiv");
+                let listDisplay = "<ul>"
+                for (let i = 0; i < fruit.length; i++){
+                    listDisplay += `<li>${fruit[i]}</li>`;
+                }
+                listDisplay += "</ul>";
+                div.innerHTML += listDisplay;
+            }
+
+            function whatever2(){
+                const div = document.querySelector("#myDiv");
+                let output = "<script>alert('Hello, World)\<\/script>";
+                div.innerHTML += output;
+            }
+        </script>
+    </head>
+    <body>
+        <p>Click the "Reset" button to reset the page.</p>
+        <div id="myDiv">
+           <p>Click the "Reset" button to reset the page.</p>
+           <button onclick="whatever2()">Click me</button>
+        </div>
+    </body>
+</html>
