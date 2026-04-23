@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            const images = [
+                "https://picsum.photos/300",
+                "https://picsum.photos/301",
+                "https://picsum.photos/302",
+                "https://picsum.photos/303",
+                "https://picsum.photos/304",
+            ];
+
+            const image = document.createElement("img");
+            let currentIndex = 0;
+            image.src = images[currentIndex];
+            const leftButton = document.createElement("button");
+            leftButton.textContent = "Left";
+            const rightButton = document.createElement("button");
+            rightButton.textContent = "Right";
+
+            leftButton.addEventListener("click", () => {
+                currentIndex--;
+                if (currentIndex < 0){
+                    currentIndex = 0;
+                }
+                image.src = images[currentIndex];
+            });
+
+            rightButton.addEventListener("click", () => {
+                currentIndex++;
+                if (currentIndex > 4){
+                    currentIndex = 4;
+                }
+                image.src = images[currentIndex];
+            });
+        </script>
+        <h1>Slideshow Gallery</h1>
+        <button>E</button>
+    </body>
+</html>

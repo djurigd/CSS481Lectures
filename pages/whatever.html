@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>The time right now is: <span id="time"></span></p>
+        <script>
+            function updateTime() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString();
+                document.getElementById("time").textContent = timeString;
+            }
+
+            setInterval(updateTime, 1000);
+        </script>
+    </body>
+</html>

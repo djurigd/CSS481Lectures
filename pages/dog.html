@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            fetch("https://dog.ceo/api/breeds/list/all")
+                .then((response) => response.json())
+                .then((data) => {
+                    const breeds = data.message;
+                    const dropdown = document.createElement("select");
+                    dropdown.id = "breedDropdown";
+                    for (const breed in breeds){
+                        const option = element.createElement("option");
+                        option.value = breed;
+                        option.textContent = breed;
+                        dropdown.appendChild(option);
+                    }
+                    dropdown.addEventListener("change", () => {
+                        const selectedBreed = dropdown.value;
+                        alert(`You selected: ${selectedBreed}`);
+                    });
+                    document.body.appendChild(dropdown);
+                })
+                .catch((error) => console.error("Error fetching dog breeds:", error));
+        </script>
+    </head>
+    <body></body>
+</html>

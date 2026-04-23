@@ -1,0 +1,7 @@
+fetch("https://dog.ceo/api/breed/shiba/images/random")
+    .then((response) => response.json())
+    .then((data) => {
+        const image = document.createElement("img");
+        image.src = data.message;
+        document.body.appendChild(image);
+    });
